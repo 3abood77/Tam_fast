@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftDeliver - Fast & Reliable Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome for icons (optional, but nice) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">SwiftDeliver</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#tracking">Track Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-button nav-cta">Get Started</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content container">
+                <h1>Your City, Delivered. Fast.</h1>
+                <p>Reliable on-demand delivery for businesses and individuals. Get anything delivered, anytime.</p>
+                <form id="quick-order-form" class="quick-order">
+                     <input type="text" placeholder="Enter Pickup Address">
+                     <input type="text" placeholder="Enter Delivery Address">
+                     <button type="submit" class="cta-button">Get Quote</button>
+                </form>
+            </div>
+             <!-- Background Graphic Element -->
+             <div class="hero-background-graphic"></div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="container">
+            <h2>How SwiftDeliver Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-map-marker-alt fa-3x"></i>
+                    <h3>1. Place Order</h3>
+                    <p>Enter pickup & delivery details easily through our platform.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-motorcycle fa-3x"></i>
+                    <h3>2. Driver Assigned</h3>
+                    <p>Our system instantly assigns the nearest available driver.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-box-open fa-3x"></i>
+                    <h3>3. Track & Receive</h3>
+                    <p>Track your delivery in real-time and receive it promptly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <i class="fas fa-store fa-2x"></i>
+                        <h3>Business Delivery</h3>
+                        <p>Reliable logistics solutions for documents, supplies, and customer orders.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-utensils fa-2x"></i>
+                        <h3>Food & Grocery</h3>
+                        <p>Get your favorite meals or essential groceries delivered to your doorstep.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gift fa-2x"></i>
+                        <h3>Personal Errands</h3>
+                        <p>Need something picked up? We handle your personal deliveries with care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tracking Section -->
+        <section id="tracking" class="container">
+            <h2>Track Your Order</h2>
+            <form id="tracking-form">
+                <input type="text" id="tracking-id" placeholder="Enter your Tracking ID" required>
+                <button type="submit" class="cta-button">Track</button>
+            </form>
+            <div id="tracking-result" class="tracking-info">
+                <!-- Tracking status will appear here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>© 2023 SwiftDeliver. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

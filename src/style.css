@@ -1,0 +1,359 @@
+/* --- Base & Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Primary color */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.8rem; color: #fff; }
+h2 { font-size: 2rem; text-align: center; color: #333; margin-bottom: 2.5rem; }
+h3 { font-size: 1.4rem; color: #444; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* --- Buttons --- */
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Yassir-like yellow */
+    color: #333;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; /* Rounded buttons */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #555;
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
+}
+/* Underline effect on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107;
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+nav .nav-cta {
+    margin-left: 2rem;
+    padding: 10px 20px;
+}
+
+/* --- Hero Section --- */
+#hero {
+    background-color: #343a40; /* Dark background */
+    /* *** Background Graphic Idea 1: Subtle Map Texture *** */
+    background-image: linear-gradient(rgba(52, 58, 64, 0.85), rgba(52, 58, 64, 0.9)), url('https://www.transparenttextures.com/patterns/otis-redding.png'); /* Replace with your preferred texture or image */
+    /* *** Background Graphic Idea 2: Cityscape Silhouette (Use actual image) *** */
+    /* background-image: linear-gradient(rgba(52, 58, 64, 0.8), rgba(52, 58, 64, 0.9)), url('path/to/cityscape.svg'); */
+    /* background-size: cover; */
+    /* background-position: center bottom; */
+
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden; /* Needed if using absolute positioned graphics */
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem auto;
+    color: #e9ecef;
+}
+
+.quick-order {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+}
+
+.quick-order input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Match button roundness */
+    font-size: 1rem;
+    flex-grow: 1; /* Allow inputs to take available space */
+    min-width: 200px; /* Minimum width before wrapping */
+}
+
+/* --- How It Works Section --- */
+#how-it-works {
+    background-color: #fff;
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.step {
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.step i {
+    color: #ffc107; /* Accent color for icons */
+    margin-bottom: 1rem;
+}
+
+/* --- Services Section --- */
+#services {
+    background-color: #eef1f3; /* Slightly different background */
+    /* Add subtle delivery-related pattern */
+     background-image: url('https://www.transparenttextures.com/patterns/food.png'); /* Example pattern */
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card i {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* --- Tracking Section --- */
+#tracking {
+    background-color: #fff;
+    text-align: center;
+}
+
+#tracking-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto 1.5rem auto;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+#tracking-id {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.tracking-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    color: #333;
+    min-height: 50px; /* Placeholder height */
+    display: none; /* Initially hidden */
+    max-width: 500px;
+    margin: 1.5rem auto 0 auto;
+    text-align: left; /* Align text left inside the box */
+}
+
+.tracking-info.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.tracking-info.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.social-links a {
+    color: #adb5bd;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffc107; /* Highlight on hover */
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav .nav-cta {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    #hero { padding: 4rem 0; }
+
+    .quick-order {
+        flex-direction: column;
+        align-items: stretch;
+    }
+     .quick-order input[type="text"] {
+        min-width: auto; /* Remove min-width */
+        width: 100%; /* Take full width */
+    }
+     .quick-order button {
+         width: 100%;
+     }
+
+    .steps, .service-cards {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+
+     #tracking-form {
+         flex-direction: column;
+         align-items: stretch;
+     }
+      #tracking-form button {
+          width: 100%;
+      }
+}
